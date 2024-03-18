@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지를 표기하는 태그</title>
+</head>
+<body>
+    <h2>이미지를 표기하는 태그</h2>
+    <p>
+        img태그는 끝태그가 없는 오픈태그이다.<br>
+        이미지의 크기는 img 태그의 속성인 width, height를 이용해 지정할 수 있으나<br>
+        CSS의 속성을 이용해 수정하는 방법이 권장된다.<br>
+        alt속성값은 이미지를 볼 수 없는 환경에서 이미지의 정보를 출력할 때 사용된다.
+    </p>
+    <div>
+        <img src="../images/pic1.jpg" alt="고양이" height="300px">
+        <img src="../images/pic2.jpg" alt="강아지" height="300px">
+        <img src="https://cdn.pixabay.com/photo/2017/10/06/12/30/dog-2822939_1280.jpg" alt="강아지귀여워" height="300px">
+    </div>
+
+    <h3>경로 (path)</h3>
+    <ol>
+        <li>
+             <h4>상대 경로: 현재 문서를 기준으로 만들어지는 경로</h4>
+             <ul>
+                <li> . : 현재 위치</li>
+                <li> .. : 상위 위치</li>
+             </ul>
+        </li>
+        <li>
+            <h4>절대 경로: 특정 기준점을 기준으로 만들어지는 경로</h4>
+            <ul>
+               <li>예) http://naver.com</li>
+               <li>Window의 특정 문서를 나타내는 경로: C:\User\user\Desktop\workspace...</li>
+            </ul>
+       </li>
+    </ol>
+    <hr>
+
+    <h3>이미지에 설명을 함께 표시</h3>
+    <figure>
+        <img src="https://cdn.pixabay.com/photo/2017/06/28/04/07/dog-2449668_1280.jpg" alt="새끼비글" width="500">
+        <figcaption>#강아지 #비글 #새끼강아지</figcaption>
+    </figure>
+
+    <h3>gif이미지</h3>
+    <img src="https://blog.kakaocdn.net/dn/dq8OFz/btq4AuchShs/PqmCKZK20PEYKtUssYe0U0/img.gif" alt="펭귄", width="400">
+
+    <p>
+        <img src="../images/face.svg" alt="가오나시얼굴" width="300">
+    </p>
+</body>
+</html>

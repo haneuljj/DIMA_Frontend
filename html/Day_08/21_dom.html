@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM의 form 태그에 접근하기</title>
+    <script defer src="./script/A18_dom.js"></script>
+    <style>
+        input[type="text"],
+        input[type="number"] {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h2>form에 접근하기</h2>
+    <h3>(1) input데이터를 읽어 결과 처리 하기</h3>
+    <div>
+        키: <input type="text" id="height" placeholder="키"> &nbsp;
+        몸무게: <input type="text" id="weight" placeholder="몸무게"> &nbsp;
+        <input type="button" id="calc1" value="계산하기"><br>
+        <h3 id="target1"></h3>
+    </div>
+    <hr>
+
+    <h3>(2) select값을 읽어 결과 처리하기</h3>
+    <div>
+        <select id="language">
+            <option value="Java">자바</option>
+            <option value="Python">파이썬</option>
+            <option value="Data Analysis">데이터분석</option>
+            <option value="Full stack(Front포함)">백엔드 개발</option>
+        </select>
+
+        <input type="button" id="calc2" value="자신있는 언어선택"><br>
+        <h3 id="target2"></h3>
+    </div>
+    <hr>
+
+    <h3>(3) 연습문제</h3>
+    <div>
+        <input type="number" id="first" placeholder="첫번째 숫자 입력"> &nbsp;
+        <select id="operator">
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select> &nbsp;
+
+        <input type="number" id="second" placeholder="두번째 숫자 입력"> &nbsp;
+        <input type="button" id="calculate" value="="> &nbsp;
+        
+        <input type="text" id="result" disabled> &nbsp; <!--readonly: 사용자 입력불가하도록, disabled: 사용을 아예 막음-->
+        <input type="button" id="clear" value="Clear">
+    </div>
+    <hr>
+
+    <h3>(4) radio button값을 읽어 결과 처리하기</h3>
+    <div>
+        <input type="radio" name="gender" class="gender" value="남자"> 남성 &nbsp;
+        <input type="radio" name="gender" class="gender" value="여자"> 여성 &nbsp;
+        <input type="button" id="calc4" value="Click">
+        <h3 id="target4"></h3>
+    </div>
+    <hr>
+
+    <h3>(5) checkbox 값을 읽어 결과 처리하기</h3>
+    <div>
+        <input type="checkbox" name="netflix" class="netflix" value="오징어 게임" checked="checked">오징어 게임 &nbsp;
+        <input type="checkbox" name="netflix" class="netflix" value="미스터 선샤인">미스터 선샤인 &nbsp;
+        <input type="checkbox" name="netflix" class="netflix" value="더 글로리">더 글로리 &nbsp;
+        <input type="checkbox" name="netflix" class="netflix" value="국민사형투표">국민사형투표 &nbsp;
+        <input type="checkbox" name="netflix" class="netflix" value="인간수업">인간수업 &nbsp;
+
+        <input type="button" id="calc5" value="Click">
+        <h3 id="target5"></h3>
+    </div>
+    <hr>
+
+    <h3>(6) textarea에 입력된 글자 처리</h3>
+    <div>
+        <textarea id="textbox" cols="50" rows="10"></textarea>
+        <span id="count" style="color:red;">글자수: 0</span> <!--몇글자 입력됐는지 출력-->
+        <input type="button" id="calc6" value="Click"> <!--입력된 글자를 받아오기-->
+        <h3 id="target6"></h3>
+    </div>
+    <hr>
+
+    <h3>(7) 기타 입력상자 처리</h3>
+    <div>
+        <input type="color" id="color"> <br>
+        <input type="date" id="date"> <br>
+        <br>
+        <input type="button" id="calc7" value="Click"> 
+        <h3 id="target7"></h3>
+    </div>
+</body>
+</html>

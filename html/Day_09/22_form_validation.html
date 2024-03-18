@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 검증</title>
+    <script defer src="./script/A19_form_validation.js"></script>
+    <style>
+        body {
+            text-align: center;
+            background-color: #3b9bb4;
+        }
+
+        h2.member {
+            width: 605px;
+            background-color: #3b9bb4;
+            color: white;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            padding: 10px 0;
+            border-radius: 10px;
+        }
+
+        table {
+            margin: 0 auto;
+            text-align: left;
+            width: 700px;
+        }
+
+        th {
+            background-color: #3b9bb4;
+            color: white;
+            font-weight: 500;
+        }
+
+        tr {
+            height: 35px;
+        }
+
+        input[type="button"] {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            background-color: #3b9bb4;
+            border-radius: 15px;
+            border: inherit;
+            cursor: pointer;
+            color: white;
+            margin-top: 50px;
+            font-weight: bold;
+        } 
+        .container {
+            background-color: white;
+            width: 900px;
+            margin: 0 auto;
+            padding: 50px 0;
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>회원가입 검증</h2>
+    <ul>
+        <li>아이디의 길이는 3~5글자 사이로 입력받는다.</li>
+        <li>비밀번호의 길이는 3~5글자 사이로 입력받고, 비밀번호 확인과 값이 같아야 한다.</li>
+        <li>이름은 입력받기만 하면 된다.</li>
+        <li>성별은 읽어오기만 하면 된다.</li>
+        <li>취미도 읽어오기만 하면 된다.</li>
+        <li>전화번호: 앞의 3자리는 select상자로 읽어오고, 나머지 번호는 숫자 8자리여야 한다.</li>
+        <li>모든 경고와 결과는 경고창으로 할 것</li>
+    </ul>
+    <br>
+    <br>
+
+    <hr> <!-- 테이블로, table border = '1' -->
+
+    <div class="container">
+    <h2 class="member">[ 회원가입 ]</h2>
+    <form action="" id="joinform">
+        <table border="1">
+            <tr>
+                <th>아이디</th>
+                <td>
+                    <input type="text" id="userid" placeholder="아이디 입력">
+                </td>
+            </tr>
+
+            <tr>
+                <th>비밀번호</th>
+                <td>
+                    <input type="text" id="pwd" placeholder="비밀번호 입력">
+                </td>
+            </tr>
+
+            <tr>
+                <th>비밀번호 확인</th>
+                <td>
+                    <input type="text" id="pwdcheck" placeholder="비밀번호 입력">
+                </td>
+            </tr>
+
+            <tr>
+                <th>이름</th>
+                <td>
+                    <input type="text" id="username" placeholder="이름 입력">
+                </td>
+            </tr>
+
+            <tr>
+                <th>성별</th>
+                <td>
+                    <input type="radio" name="gender" class="gender" value="남자" checked="checked">남자
+                    <input type="radio" name="gender" class="gender" value="여자">여자
+                </td>
+            </tr>
+
+            <tr>
+                <th>취미</th>
+                <td>
+                    <input type="checkbox" name="hobby" class="hobby" value="넷플릭스시청" checked="checked">넷플릭스시청
+                    <input type="checkbox" name="hobby" class="hobby" value="자전거타기">자전거타기
+                    <input type="checkbox" name="hobby" class="hobby" value="책읽기">책읽기 
+                    <input type="checkbox" name="hobby" class="hobby" value="여행">여행
+                    <input type="checkbox" name="hobby" class="hobby" value="맛집찾아다니기">맛집찾아다니기
+                </td>
+            </tr>
+
+            <tr>
+                <th>전화번호</th>
+                <td>
+                    <select id="tel1">
+                        <option value="010" selected="selected">010</option>
+                        <option value="011">011</option>
+                        <option value="012">012</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                    </select>
+                    <input type="text" id="tel2" placeholder="뒷 8자리입력">
+                </td>
+            </tr>
+        </table>
+
+        <input type="button" id="join" value="회원가입">
+        <input type="button" id="clear" value="취소">
+    </form>
+    </div>
+</body>
+</html>

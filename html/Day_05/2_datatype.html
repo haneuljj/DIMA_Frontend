@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 타입과 변수</title>
+</head>
+<body>
+    <h2 id="header">자바 스크립트 결과는 콘솔창에서 확인</h2>
+    <script>
+        // 자료형
+        /* 1. 문자열: "대한민국", '대한민국', `대한민국` */
+        let str = "대한민국";
+        console.log(str); // 콘솔창에서 출력
+        console.log(typeof str); // str의 타입 반환
+        console.log(`철수는 ${str} 사람입니다.`); // ${변수명}, ``사용한 문자열은 중간에 변수 삽입가능
+
+        /* 2. 숫자형: 정수, 실수 모두 포함된 숫자 */
+        let number = 12;
+        console.log(typeof number);
+        console.log('나이는: ' + number); // +로 문자열 결합 가능
+        console.log(number / 5); // 2.4, 연산은 실수형으로
+
+        /* 3. boolean: true, false (0을 제외한 모든 숫자는 true) */
+        let bool = true;
+        console.log(typeof bool);
+        console.log(10 > 20);
+        if(1) console.log('1은 true와 같다.');
+
+        // 결과를 브라우저 출력: 사용 권장 안함
+        document.write(typeof bool);
+
+        /* 4. 함수형 */
+        // 선언 함수
+        // + 호이스팅
+        function add(a,b) {
+            return a + b;
+        } 
+
+        let sum = add; // 함수를 변수에 할당, sum이 add함수처럼 동작
+        console.log(`sum의 결과: ${sum(21, 11)}`);
+
+        // 표현 함수
+        let minus = function (a, b) {
+            return a - b;
+        };
+        console.log(typeof add);
+        console.log(typeof minus);
+        console.log(`더하기 결과: ${add(10, 20)}`);
+        console.log(`빼기 결과: ${minus(10, 20)}`);
+
+        console.log('-----------------------');
+        /* 5. 객체형: 객체의 종류는 여러가지 */
+        // 5-1) Object, 파이썬의 딕셔너리, 자바의 map과 유사
+        let obj = {name : '홍길동', age : 25};
+        console.log(typeof obj);
+        console.log('이름은 ' + obj['name']); // name값에 매핑된 값 반환
+        console.log('나이는 ' + obj.age);
+        console.log(obj);
+
+        // 5-2) JSON(Java Script Object Notation): 주로 비동기통신을 위한 데이터 타입(직렬화 기능 탑재)
+        let data = {"name" : '홍길동', "age" : 25}; // key에 해당하는 값을 ""로 묶어야함
+
+        console.log('-----------------------');
+        // 5-3) array: 배열
+        // 2차이상 배열 -> 파이썬과 사용법 유사
+        let ary = [2, 4, 6, 8];
+        console.log(typeof ary);
+        console.log(ary);
+        console.log(ary[1]);
+
+        console.log('-----------------------');
+        // 5-4) html 객체
+        // html 요소(태그) 가져오기
+        let html = document.getElementById("header");
+        console.log(typeof html);
+        console.log(html);
+
+        let a = html.innerHTML; // html 값 가져오기
+        console.log(a);
+        html.innerHTML = "내용 바꾸기"; // html 값 바꾸기
+        
+        //alert(html);
+        console.log('-----------------------');
+        // 5-5) null 객체: 오류, 변수가 아무 객체도 가리키지 않고 있음을 나타냄
+        // JS V1부터 나온 오류, 사용 지양
+        let temp = null;
+        console.log(typeof temp);
+
+        console.log('-----------------------');
+        /* 6. undefined 타입*/
+        // 변수에 값이 존재하지 않음을 나타냄
+        // 변수 생성하고 초기화 하지 않은 경우 undefined 타입이다
+        let noInit;
+        console.log(noInit);
+        console.log(typeof noInit);
+
+        /* 7. Symbol 타입 : 유일성 보장을 위해 사용*/
+        let b = Symbol();
+
+    </script>
+</body>
+</html>

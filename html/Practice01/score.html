@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종합평가 결과</title>
+    <script defer src="./score.js"></script>
+
+    <link rel="stylesheet" href="../Day_02/CSS/reset.css">
+    <link rel="stylesheet" href="./score.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Noto+Serif+KR&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">                                     
+        <h2 id="title">[ 종합 평가 점수 ]</h2>
+        <ol type="1">
+            <li>
+                <span>Java Fundamental : </span>
+                <input type="text" id="java" placeholder="0"> 점
+            </li>
+            <li><span>Oracle Database : </span>
+                <input type="text" id="oracle" placeholder="0"> 점
+            </li>
+            <li>
+                <span>Web Frontend : </span>
+                <input type="text" id="front" placeholder="0"> 점
+            </li>
+            <li>
+                <span>Web Backend : </span>
+                <input type="text" id="back" placeholder="0"> 점
+            </li>
+            <li>
+                <span>1차 Project : </span>
+                <input type="text" id="project1" placeholder="0"> 점
+            </li>
+            <li>
+                <span>2차 Project: </span>
+                <input type="text" id="project2" placeholder="0"> 점
+            </li>
+            <li>
+                <span>출 석 률: </span>
+                <input type="text" id="attendence" placeholder="100"> %
+            </li>
+        </ol>
+        <input type="button" value="결과 확인" id="check">
+        <p class="msg">※ 각 과목은 10%, 프로젝트 2회 각 20%, 출석률 20%로 총 100%로 점수 환산함</p>
+
+        <div>
+            <h2># 최종 결과:</h2>&nbsp;
+            <span>종합 평가 점수: <span id="avg">0</span>점
+        </div>
+
+    </div>
+</body>
+
+</html>

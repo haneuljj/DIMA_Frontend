@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+</head>
+<body>
+    <h2>CSS 선택자</h2>
+    <p>
+        요소에 서식이나 배경을 적용하기 위해서는 적용하려는 요소를 정확히 선택할 수 있어야 한다.<br>
+        선택자는 이러한 요소들을 다양한 방식으로 선택할 수 있도록 해준다.
+    </p>
+
+    <ul>
+        <li>단순 선택자
+            <ul>
+                <li>전체 선택자(*): 전체 요소를 선택할 때 사용(특잇값: 0)</li>
+                <li>태그명 선택자: 태그이름으로 선택할 때 사용(특잇값: 1)</li>
+                <li>그룹 선택자: 콤마(,)를 이용해서 동일한 스타일 정의를 가진 모든 HTML 요소를 선택할 때 사용</li>
+                <li>클래스 선택자: class라는 속성으로 지정한 값을 가진 모든 요소들을 선택할 때 사용<br>
+                    (클래스는 같은 값을 여러 요소에 사용가능하므로 복수 선택 가능) (특잇값: 10)
+                </li>
+                <li>아이디 선택자: id라는 속성으로 지정한 값을 가진 요소를 선택할 때 사용<br>
+                    (아이디는 값을 하나의 요소에 사용가능하므로 단일 요소 선택 가능) (특잇값: 100)
+                </li>
+                <li>
+                    (예) <a href="./simple_selector.html">단순 선택자의 사용 예</a>
+                </li>
+            </ul>
+        </li>
+        <li>가상(Pseudo) 클래스 선택자
+            <ul>
+                <li>참고사이트 : 
+                    <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">
+                        w3schools 가상클래스선택자
+                    </a> 
+                </li>
+                <li>
+                    가상 클래스는 태그나 특정 다른 선택자 뒤에 콜론(:)을 붙여 선택 기능을 추가하는 키워드로<br>
+                    선택한 요소가 특별한 상태여야 만족되는 클래스
+                </li>
+                <li>주로 a태그의 상태를 나눠서 가상 클래스를 적용했으나, 다른 태그에도 사용 가능</li>
+                <li>
+                    (예) <a href="./pseudo_class.html">가상 클래스 선택자의 사용 예</a> <br>
+                    (연습) <a href="./tableContent.html">테이블에 가상 클래스 선택자 사용</a>
+                </li>
+            </ul>
+        </li>
+        <li>가상(Pseudo) 요소 선택자
+            <ul>
+                <li> 
+                    참고 사이트:
+                    <a href="https://www.w3schools.com/css/css_pseudo_elements.asp">
+                        w3schools의 가상요소선택자
+                    </a>
+                    
+                </li>
+                <li>
+                    가상요소는 태그의 지정된 부분에 스타일을 적용할 때 사용<br>
+                    가상요소는 콜론2개(::)를 붙여 요소의 일부분에 스타일을 적용 가능<br>
+                    예를 들어, 요소의 첫 글자, 요소의 첫 줄, 콘텐츠 앞이나 뒤에 또다른 콘텐츠 삽입 등
+                </li>
+                <li>
+                    (예) <a href="./pseudo_element.html">가상 요소 선택자의 사용 예</a>
+                </li>
+            </ul>
+        </li>
+        <li>속성 선택자
+            <ul>
+                <li>특정 속성이나 속성값을 가진 HTML요소를 선택할 때 사용</li>
+                <li>
+                    <ul>
+                        <li>[속성]</li>
+                        <li>[속성=값]</li>
+                        <li>[속성~=값]</li>
+                        <li>[속성^=값]</li>
+                        <li>[속성$=값]</li>
+                        <li>[속성|=값]</li>
+                        <li>[속성*=값]</li>
+                    </ul>
+                </li>
+                <li>
+                    참고 사이트:
+                    <a href="https://www.w3schools.com/cssref/sel_attribute.php">
+                        w3schools의 속성 선택자
+                    </a>
+                </li>
+                <li>
+                    (예) <a href="./attribute_selector.html">속성 선택자의 사용 예</a>
+                </li>
+            </ul>
+        </li>
+        <li>종속 선택자: 둘 이상의 선택자를 조합해서 사용하는 것
+            <ul> 4가지 주요 조합
+                <li>공백(후손 선택잦) : 하위항목 선택</li>
+                <li>&gt;(자식 선택자) : 인접한 하위 항목을 선택 </li>
+                <li>+(형제 선택자) : 같은 상위 클래스를 가진 연달은 다음 요소 선택</li>
+                <li>~(일반 형제 선택자) : 같은 상위 클래스를 가진 모든 요소들 선택</li>
+                <li>
+                    (예) <a href="./sibling_selector.html">종속 선택자의 사용 예</a>
+                </li>
+            </ul>
+        </li>
+        <li>기타
+            <ul>
+                <li>not(선택자) : 괄호 안에 지정한 선택자가 아닌 요소 선택</li>
+                <li>nth-child(수식) : 수식에 맞는 요소 선택</li>
+                <li>
+                    (예) <a href="./etc_selector.html">기타 선택자의 사용 예</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

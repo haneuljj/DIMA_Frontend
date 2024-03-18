@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블연습</title>
+    <style>
+        table {
+            border: 2px  solid #333;
+            border-collapse: collapse;
+        }
+        table thead{
+            background-color: #eee;
+        }
+        table th,
+        table td {
+            border : 1px solid #333;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>시간표 테이블 작성</h2>
+    <img src="../images/flower2.jpg" alt="꽃 이미지", width="350">
+    <table>
+        <caption><b>시간표</b></caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th><span style="color:blue;">월요일</span></th>
+                <th><span style="color:blue;">화요일</span></th>
+                <th><span style="color:blue;">수요일</span></th>
+                <th><span style="color:blue;">목요일</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><span style="color:blue;">1교시</span></th>
+                <td colspan="2">국어</td>
+                <td rowspan="4">컴퓨터</td>
+                <td rowspan="2">CA</td>
+            </tr>
+            <tr>
+                <th><span style="color:blue;">2교시</span></th>
+                <td rowspan="3">수학</td>
+                <td rowspan="2">영어</td>
+            </tr>
+            <tr>
+                <th><span style="color:blue;">3교시</span></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th><span style="color:blue;">4교시</span></th>
+                <td>과학</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <img src="../images/flower2.jpg" alt="꽃 이미지", width="350">
+</body>
+</html>

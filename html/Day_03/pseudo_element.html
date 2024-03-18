@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소 선택자의 사용 예</title>
+    <style>
+        p.one::first-letter {
+            color: #ff0000;
+            font-size: x-large;
+        }
+
+        p.two::first-line {
+            color: #00ff00;
+        }
+
+        p::selection { /*드래그시 스타일 적용됨*/
+            color: white;
+            background-color: black;
+        }
+
+        p.three::before {
+            content: "하하하!!! ";
+        }
+
+        p.four::after {
+            content: url("../images/bullet.png");
+        }
+    </style>
+</head>
+<body>
+    <h2>가상 요소 선택자</h2>
+    <p class="one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Officia ex saepe voluptate eum eveniet, cum placeat, veniam blanditiis voluptates sit corrupti.
+        In reprehenderit quis dolore quos nihil ipsam laborum commodi!
+    </p>
+    <p class="two">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Officia ex saepe voluptate eum eveniet, cum placeat, veniam blanditiis voluptates sit corrupti.
+        In reprehenderit quis dolore quos nihil ipsam laborum commodi!
+    </p>
+    <p class="three">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Officia ex saepe voluptate eum eveniet, cum placeat, veniam blanditiis voluptates sit corrupti.
+        In reprehenderit quis dolore quos nihil ipsam laborum commodi!
+    </p>
+    <p class="four">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Officia ex saepe voluptate eum eveniet, cum placeat, veniam blanditiis voluptates sit corrupti.
+        In reprehenderit quis dolore quos nihil ipsam laborum commodi!
+    </p>
+</body>
+</html>

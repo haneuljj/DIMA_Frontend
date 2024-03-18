@@ -1,0 +1,65 @@
+.header {
+    text-align: center;
+    padding: 80px 0; /*위 아래 80px 여백, 좌우여백은 없게*/
+}
+
+/*header의 자식 태그*/
+.header>h1>a>img {
+    height: 40px;
+}
+
+/*div태그는 블럭 요소 -> 블럭의 크기 지정가능*/
+div.content {
+    width: 1000px;
+    margin: 0 auto; /*바깥쪽 여, auto: 알아서 좌우여백 균등하게*/
+    padding: 40px 20px;
+    background-color: #f1f1f1;
+}
+
+.content ul>li {
+    margin: 20px 0;
+}
+
+.content ul>li>label {
+    display: inline-block; /*인라인요소를 블럭으로, 블럭을 인라인요소로*/
+    width: 180px; /*인라인이면서 블럭, 너비 높이 지정가능*/
+}
+
+.content ul>li>span.gender {
+    display: inline-block;
+    width: 180px
+}
+
+.content ul>li>select,
+.content ul>li>input,
+.content ul>li input:not(.check) {
+    margin: 10px 0; /*바깥쪽 여백*/
+    padding: 10px 0; /*안쪽 여백*/
+    width: 200px; /*폭*/
+}
+
+.content .buttonWrap>input{
+    display: block;
+    background-color: #03c75a; /*버튼박스색*/
+    color: white; /*글자색*/
+    border: inherit; /*테두리 없애기*/
+    width: 300px;
+    border-radius: 10px; /*모서리를 둥글게*/
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 15px;
+    margin: 0 auto;
+}
+
+.footer {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer li {
+    margin: 10px auto;
+}
+
+.footer li span {
+    line-height: 20px; /*줄 높이*/
+}

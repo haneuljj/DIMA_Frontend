@@ -1,0 +1,79 @@
+body {
+    background-color: azure;
+    font-family: "Hahmlet", serif;
+    font-size: 1.1em;
+}
+
+div.wrapper {
+    width: 800px;
+    margin: 0 auto;
+
+}
+
+h2#title {
+    font-family: "Noto Serif KR", serif;
+    padding: 5px;
+    background-color: black;
+    color: azure;
+    text-align: center;
+}   
+
+ol {
+    margin-left: 80px;
+}
+
+span {
+    display: inline-block;
+    width: 200px;
+}
+
+input[type="text"] {
+    text-align: right;
+    display: inline-block;
+    margin: 8px 2px;
+    height: 20px;
+}
+
+input[type="button"] {
+    display: block; /*혼자 영역을 다 차지하고 있어서 inline-block으로 할 필요 없음*/
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    font-weight: bolder;
+    color: white;
+    background: linear-gradient(45deg, rgba(78, 197, 217, 1) 0%, rgba(38, 59, 151, 1) 100%);
+    font-family: "Noto Serif KR", serif;
+    border: 0px;
+}
+
+input#confirm:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+div.finalResult,
+p.msg {
+    text-align: center;
+
+}
+
+p.msg {
+    font-weight: bold;
+}
+
+#finalTitle {
+    display: inline-block;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    color: rgb(179, 209, 216);
+}
+
+.finalResult span#total {
+    display: inline-block;
+    width: 200px;
+}
+
+.finalResult span#avg {
+    display: inline-block;
+    width: 50px;
+}

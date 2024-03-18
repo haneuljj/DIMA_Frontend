@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종합평가 결과</title>
+    <!--구글 웹폰트 CDN방식으로 가져오기-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Noto+Serif+KR&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/Frontend_Exam.css">
+    <script defer src="./script/Frontend_Exam.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">                                     
+        <h2 id="title">[ 종합 평가 점수 ]</h2>
+        <ol type="1">
+            <li>
+                <span>Java Fundamental : </span>
+                <input type="text" placeholder="0" class="subjectScore sub"> 점
+            </li>
+            <li><span>Oracle Database : </span>
+                <input type="text" placeholder="0" class="subjectScore sub"> 점
+            </li>
+            <li>
+                <span>Web Frontend : </span>
+                <input type="text" placeholder="0" class="subjectScore sub"> 점
+            </li>
+            <li>
+                <span>Web Backend : </span>
+                <input type="text" placeholder="0" class="subjectScore sub"> 점
+            </li>
+            <li>
+                <span>1차 Project : </span>
+                <input type="text" placeholder="0" class="subjectScore project"> 점
+            </li>
+            <li>
+                <span>2차 Project: </span>
+                <input type="text" placeholder="0" class="subjectScore project"> 점
+            </li>
+            <li>
+                <span>출 석 률: </span>
+                <input type="text" placeholder="100" class="subjectScore attendence"> %
+            </li>
+        </ol>
+        <input type="button" id="confirm" value="결과 확인">
+        <p class="msg">※ 각 과목은 10%, 프로젝트 2회 각 20%, 출석률 20%로 총 100%로 점수 환산함</p>
+
+        <div class="finalResult">
+            <h2 id="finalTitle"># 최종 결과:</h2>&nbsp;
+            <span id="total">종합 평가 점수: </span><span id="avg">0</span>점
+        </div>
+
+    </div>
+</body>
+
+</html>

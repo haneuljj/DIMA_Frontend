@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 콘텐츠</title>
+</head>
+<body>
+    <!--input태그를 form 태그가 감싸야 동작함-->
+    <form action="" method="post" enctype="multipart/form-data"> <!--method의 기본값은 get-->
+        <!--id, class 속성; global 속성--, class는 전체 페이지에서 중복 사용 가능하지만 id는 전체페이지에서 유일한값이어야-->
+        <div class="content">
+            <div class="header">
+                <h2>사용자의 정보를 입력받는 태그</h2>
+                <p>
+                    form 요소는 사용자의 데이터를 입력받는 요소들을 의미한다.<br>
+                    form 요소의 대부분은 인라인 요소이다.<br>
+                    회원가입화면, 로그인화면, 회원정보수정화면, 검색창 등이 모두 폼관련 태그로 구성된다.
+                </p>
+            </div>
+
+            <div class="article">
+                <h3>input태그 중 입력상자 : type="text", type="password", type="hidden"</h3>
+                <fieldset>
+                    <legend>사용자로부터 직접 입력</legend>
+                    <label for="userid"><b>User Id </b></label> <!--for속성: lable과 input의 값을 일치시켜 동일부분임을 표시-->
+                    <!--name속성 값(서버의 변수명)이 있어야 서버로 보낼 수 있음-->
+                    <input type="text" maxlength="15" name="userid" id="userid" placeholder="아이디 입력">
+
+                    <label for="userpwd"><b>User Password </b></label>
+                    <input type="password" maxlength="15" name="userpwd" id="userpwd" placeholder="비밀번호 입력">
+
+                    <!--사용자 모르게 서버에 정보를 넘길때 이용-->
+                    <!--name: 서버의 변수명-->
+                    <!--value: 서버로 넘길 값-->
+                    <input type="hidden" name="hiddenData" value="서버로 전달되는 데이터">
+
+                    <label for="picture">사진 첨부</label>
+                    <input type="file" name="picture" id="picture">
+
+                </fieldset>
+            </div>
+
+            <div class="article">
+                <h3>type="radio": 여러 항목 중에 하나만 선택할 때 사용</h3>
+                <fieldset>
+                    <legend>Location</legend>
+                    <!--name 속성을 같은 이름으로 설정해야 같은 그룹으로 묶임-->    
+                    <input type="radio" name="location" checked="checked">서울 <!--checked:프로그램시작시 체크되어있게됨-->
+                    <input type="radio" name="location">부산
+                    <input type="radio" name="location">제주
+                </fieldset>
+
+                <h3>select / option 태그: 여러 항목 중에 하나만 선택할 때 </h3>
+                <fieldset>
+                    <legend>출신학교와 선호색상을 선택하세요</legend>
+                    <select name="school" id="">
+                        <optgroup>
+                            <option value="서울고등학교">서울고등학교</option>
+                            <option value="경기고등학교">경기고등학교</option>
+                            <option value="부산고등학교">부산고등학교</option>
+                            <option value="제주고등학교">제주고등학교</option>
+                        </optgroup>
+                    </select>
+                    <select name="color" id="">
+                        <optgroup>
+                            <option value="RED">빨강색</option>
+                            <option value="BLUE">파랑색</option>
+                            <option value="YELLOW">노랑색</option>
+                            <option value="SKYBLUE">하늘색</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="article">
+                <h3>input type="checkbox" : 여러 항목 중에 여러 개 선택할 때</h3>
+                <fieldset>
+                    <legend>취미를 선택하세요</legend>
+                    <input type="checkbox" name="hobby" id="" value="낚시" checked="checked">낚시 &nbsp; <!--한칸띄우기-->
+                    <input type="checkbox" name="hobby" id="" value="자전거타기">자전거타기 &nbsp;
+                    <input type="checkbox" name="hobby" id="" value="수영">수영 &nbsp;
+                    <input type="checkbox" name="hobby" id="" value="등산">등산 &nbsp;
+                    <input type="checkbox" name="hobby" id="" value="캠핑">캠핑 &nbsp;
+                </fieldset>
+
+                <fieldset>
+                    <h3>select / option : multiple속성을 이용해서 여러 개 선택</h3>
+                    <select name="color2" multiple="multiple">
+                        <optgroup>
+                            <option value="RED">빨강색</option>
+                            <option value="BLUE">파랑색</option>
+                            <option value="YELLOW">노랑색</option>
+                            <option value="SKYBLUE">하늘색</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="article">
+                <h3>textarea 태그 - 여러 줄 글상자</h3>
+                <label for="reason">반품사유</label><br>
+                <!--textarea태그 안에 아무것도 쓰지 않아야함-->
+                <textarea name="" id="reason" cols="100" rows="10"></textarea>
+            </div>
+
+            <br>
+            <div class="btngroup">
+                <input type="button" value="전송"> <!--그냥 버튼-->
+                <input type="submit" value="전송2"> <!--실제로 데이터 전송하는 버튼-->
+                <input type="reset" value="취소"> <!--입력한 데이터 삭제-->
+            </div>
+
+        </div> <!--end div.content-->
+
+        <hr>
+        <fieldset>
+            <ul>
+                <h3>input type의 속성: input tag의 성격을 정의한다.</h3>
+                <li>type="text": 한 줄짜리 텍스트를 입력하기 위한 용도</li>
+                <li>type="password": 비밀번호 등 외부에 노출되지 않는 정보를 입력하기 위한 용도</li>
+                <li>type="hidden": 사용자에게 보이지는 않지만 서버로 넘어가는 정보를 정의하는 필드
+                    (반드시 name과 value값을 지정해야함)</li>
+                <li>
+                    type="button": 버튼 모양을 생성. 아무런 기능 없음 <br>
+                    기능을 가지고 있는 경우 자바스크립트와 연동시 불편함이 있을 수 있어 자바스크립트와 편리한 연동을 위함
+                </li>
+                <li>type="submit": form action 속성이 지정한 url 혹은 서버프로그램(경로)로 데이터를 전송</li>
+                <li>type="reset": 리셋 버튼 기능, 입력 초기화</li>
+                <li>
+                    type="file": 사용자가 파일을 첨부해서 서버로 전송하기 위한 버튼<br>
+                    반드시 2가지 정보를 추가해야함<br>
+                    1)form 태그의 method속성값은 반드시 post이어야함<br>
+                    2)form 태그의 enctype속성값에 multipart/form-data값을 추가해야함<br>
+                </li>
+            </ul>
+        </fieldset>
+        
+    </form>
+</body>
+</html>

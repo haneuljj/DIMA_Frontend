@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        div.sample>img {
+            /*display: block;*/
+            margin: 10px;
+            width: 100px;
+            border: 1px solid red;
+        }
+        div.sample>img.second {
+            /*display: none; /*화면 상에서 보이지 않게됨, 밑의 그림이 올라와 그림이 원래 3개인거처럼*/
+            visibility: hidden; /*이미지의 영역은 그대로 있고 이미지만 안보임*/
+        }
+
+        div.radius {
+            background-color: aquamarine;
+            width : 200px;
+            height: 60px;
+            border-radius: 15px;
+            box-shadow: 3px 3px 3px rgb(198, 196, 196);
+            cursor: pointer; /*태그 영역에 마우스를 올리면 마우스 커서의 모양이 바뀜*/
+        }
+
+        div.search {
+            width: 746px;
+            height: 48px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px 5px rgb(198, 196, 196);
+        }
+        div.search>img {
+            width: 30px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        div.search>input {
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 15px 10px;
+            width: 680px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h3>Display 속성</h3>
+    <p>none, block, inline, inline-block 속성값을 이용하여 화면에 출력 방법을 제어할 수 있다.</p>
+    <div class="sample">
+        <img src="../images/face1 (1).png" alt="첫번째 얼굴">
+        <img src="../images/face1 (2).png" alt="두번째 얼굴" class="second">
+        <img src="../images/face1 (3).png" alt="세번째 얼굴">
+        <img src="../images/face1 (4).png" alt="네번째 얼굴">
+    </div>
+    <hr>
+
+    <h3>둥근 테두리 만들기(border-radius)</h3>
+    <div class="radius"></div>
+    <hr>
+
+    <h3>(연습)둥근 테두리를 이용한 검색창 만들기</h3>
+    <div class="search">
+        <input type="text" placeholder="검색어를 입력해 주세요.">
+        <img src="../images/magnifier.png" alt="돋보기">
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크를 표기하는 태그</title>
+    <!--마우스를 올렸을 때, 아무것도 하지 않았을 때, 링크가 걸린 a태그의 스타일, 
+        클릭했다 떼는 잠깐 시간동안에, 방문했던 링크의 스타일을 다 다르게 지정-->
+    <style>
+        a { text-decoration: none; }
+        a:link { color: black; }
+        a:hover {
+            color: red;
+            font-weight: bold;
+        }
+        a:active {
+            color: yellow;
+            font-weight: bold;
+        }
+        a:visited { color: blue;}
+
+    </style>
+</head>
+<body>
+    <h2>a tag - 링크를 표기하는 태그</h2>
+    <p>
+        링크를 만드는 태그 &lt;a&gt;&lt;/a&gt; : 클릭을 하면 연결된 곳으로 이동하는 태그<br>
+        텍스트를 넣어 사용하면 텍스트 링크가 되고, 이미지를 넣어 사용하면 이미지 링크가 된다
+    </p>
+
+    <!--id속성: global속성, 어느 태그에 주던 상관없음-->
+    <h4 id="section1">a 태그의 중요 속성</h4>
+    <ul>
+        <li>href: 링크를 생성해서 이동할 목적지의 파일이나 웹문서 상의 다른 주소</li>
+        <li>target: 링크의 내용이 표시될 위치
+            <ul>
+                <li>_self : 현재 창에 바로 열림 (default)</li>
+                <li>_blank : 새 창에 열림</li>
+                <li>사용자 지정 이름: 사용자가 지정한 이름의 창으로 열리고, 그 이름의 창이 없으면 새 창이 열림</li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+
+    <h4 id="section2">텍스트 링크</h4>
+    <ul>
+        <li><a href="http://naver.com">네이버</a></li>
+        <li><a href="http://google.co.kr" target="_blank">구글</a></li>
+        <li><a href="http://daum.net" target="mywin">다음</a></li>
+    </ul>
+    <hr>
+
+    <h4 id="section3">이미지 링크</h4>
+    <ul>
+        <li>
+            <a href="https://comic.naver.com/webtoon/list?titleId=774862&tab=sat">
+                <img src="https://image-comic.pstatic.net/webtoon/774862/thumbnail/thumbnail_IMAG21_39b7c327-7234-4636-b608-401478abede3.jpg" alt="조조코믹스" width="300px">
+            </a><br>
+            <strong>조조코믹스</strong>
+        </li>
+        <li>
+            <a href="https://comic.naver.com/webtoon/list?titleId=796152&tab=tue">
+                <img src="https://image-comic.pstatic.net/webtoon/796152/thumbnail/thumbnail_IMAG21_26b9c1d8-ca2d-4fc7-87ea-a3334634236a.jpg" alt="마루는강쥐" width="300px">
+            </a><br>
+            <strong>마루는 강쥐</strong>
+        </li>
+    </ul>
+    <hr>
+
+    <h4>문서 내 특정 위치로 이동</h4>
+    <p>
+        href속성값으로 특정 문서의 위치로 이동하기 위해서는 글로벌 속성인 id를 지정하고<br>
+        해당 아이디가 적용된 요소를 a 태그의 href로 지정하면 클릭 시 해당 아이디의<br>
+        위치를 브라우저 상단에 놓는다.
+    </p>
+    <ul>
+        <li><a href="#section1">a태그의 중요 속성</a></li>
+        <li><a href="#section2">텍스트 링크</a></li>
+        <li><a href="#section3">이미지 링크</a></li>
+    </ul>
+</body>
+</html>

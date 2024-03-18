@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자의 사용 예</title>
+    <style>
+        input[type="text"] {
+            width: 100px;
+            transition: width .35s ease-in-out;
+        }
+        /*input요소에 포커스를 두면 스타일 적용*/
+        input[type="text"]:focus {
+            width: 250px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="checkbox"]:focus {
+            outline : 1px solid red; /*테두리 스타일 적용*/
+            background-color: yellow;
+        }
+        </style>
+</head>
+<body>
+    <h2>속성 선택자의 사용 예</h2> 
+    <p>Set the width of the input field to 100 pixels. However, when the input field gets focus, make it 250 pixels wide:</p> 
+    Search: <input type="text" name="search">
+
+    <p>
+        인풋 상자를 3개 정도 생성한 후 마우스로 포커스를 넣으면 인풋상자의 테두리와 배경색이 바뀌도록 하시오<br>
+        <input type="text" placeholder="아이디 입력"><br>
+        <input type="password" placeholder="비밀번호입력"><br>
+        <input type="checkbox">체크하시오.<br>
+    </p>
+</body>
+</html>

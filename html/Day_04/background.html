@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 색과 이미지</title>
+    <style>
+        div.container {
+            background-image: url(../images/pic2.jpg);
+            background-repeat: no-repeat;
+            background-position: 50% 20%; /*속한 영역의 가운데에 위치*/
+            background-attachment: fixed; /*스크롤해도 배경 이미지 고정되도록*/
+            /*배경이 속해있는 태그 영역과 상관없이 브라우저 기준으로 고정됨*/
+            width: 1000px;
+            height: 1080px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>배경에 색상이나 이미지 넣기</h2>
+        <ul>
+            <li>background-color : 배경색 넣기</li>
+            <li>
+                background-image : 배경그림 넣기(그림의 경로는 url()속성 이용)
+                <ul>
+                    <li>background-repeat : 그림의 반복여부 지정 (repeat, repeat-x, repeat-y, no-repeat)</li>
+                    <li>background-position : 배경 그림의 위치 지정 (수평위치, 수직위치)</li>
+                    <li>background-attachment : 배경 그림의 고정여부 (fixed, scroll)<br>
+                        (fixed-배경이 속해있는 태그 영역과 상관없이 브라우저 기준으로 고정됨)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>  
+</body>
+</html>

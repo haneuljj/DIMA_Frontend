@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습: 테이블 콘텐츠에 CSS 적용하기</title>
+    <!--CSS로 테이블 디자인 적용-->
+    <style>
+        table {
+            border: 2px  solid #333;
+            border-collapse: collapse;
+        }
+        table thead{
+            background-color: #eee;
+        }
+        table th,
+        table td {
+            border : 1px, solid #eee;
+            padding: 10px;
+        }
+
+        tbody>tr:hover {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h2>테이블 콘텐츠에 CSS 적용하기</h2>
+    <!-- 
+        연습 문제) 테이블의 특정 레코드에 마우스를 올리면 그 줄 전체 배경색상을 다른 색으로 변경하기
+    -->
+    <table border="1">
+        <caption>표의 제목</caption>
+        <thead>
+            <tr>
+                <th>제목 셀1</th>
+                <th>제목 셀2</th>
+                <th>제목 셀3</th>
+                <th>제목 셀4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>본문 11</td>
+                <td>본문 12</td>
+                <td>본문 13</td>
+                <td>본문 14</td>
+            </tr>
+            <tr>
+                <td>본문 21</td>
+                <td>본문 22</td>
+                <td>본문 23</td>
+                <td>본문 24</td>
+            </tr>
+            <tr>
+                <td>본문 31</td>
+                <td>본문 32</td>
+                <td>본문 33</td>
+                <td>본문 34</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

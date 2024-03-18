@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background-color:khaki;
+            border: 1px solid gray;
+        }
+        div.one {
+            /*기본값: static*/
+            position: relative; /*relative: 형제들에게 영향을 주지 않음*/
+            top: 50px;
+            left: 50px;
+            background-color:chocolate;
+        }
+        div.three {
+            position: relative; 
+            top: 50px; /*원래 본인 영역의 위치 기준으로 이동*/
+            left: 50px;
+            background-color:lightpink;
+        }
+        div.two {
+            position: absolute; /*브라우저의 끝 기준으로 이동, 형제들에게 영향을 줌*/
+            top: 50px;
+            left: 50px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h2>Position을 이용한 배치</h2>
+    <div class="item one">하나</div>
+    <div class="item two">둘</div>
+    <div class="item three">셋</div>
+    <div class="item four">넷</div>
+    <div class="item five">다섯</div>
+
+</body>
+</html>

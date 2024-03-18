@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[연습]Node를 이용한 고객관리 프로그램</title>
+    <script defer src="./script/A24_nodeExam.js"></script>
+    <style>
+        table{
+            border-collapse: collapse;
+            box-shadow: 3px 3px 3px 3px lightgrey;
+        }
+        input[type="text"], input[type="email"] {
+            width: 200px;
+            outline: none;
+            border: 0px;
+        }
+        th {
+            background-color: hwb(188 94% 0%);
+            height: 30px;
+        }
+        td {
+            width: 200px;
+            height: 30px;
+            text-align: center;
+        }
+        input[type="submit"] {
+            margin-left: 260px;
+            margin-top: 30px;
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            border: 0px;
+            background-color: hwb(188 94% 0%);
+            box-shadow: 3px 3px 3px 3px lightgrey;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>[연습]Node를 이용한 고객관리 프로그램</h2>
+    <div class="container">
+        <form action="" id="member">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>고객이름</th>
+                        <th>연락처(전화번호)</th>
+                        <th>이메일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" id="name" placeholder="이름 입력" required>
+                        </td>
+                        <td>
+                            <input type="text" id="phone" placeholder="전화번호 입력" required>
+                        </td>
+                        <td>
+                            <input type="email" id="email" placeholder="이메일 입력" required>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="submit" id="addmember" value="추가">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="3">고객 목록</th>
+                </tr>
+            </thead>
+            <tbody id="memberlist">
+                
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

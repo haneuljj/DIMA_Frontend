@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Sticky 연습</title>
+    <style>
+        /* 본문 영역에 세로 스크롤 생성*/
+        div.container {
+            padding-bottom: 2000px;
+        }
+        /* 검색창 영역 */
+        div.search {
+            margin: 0 auto;
+            background-color: white;
+            width: 500px;
+            height: 50px;
+            border-radius: 25px;
+            border: 1px solid lightgray;
+            box-shadow: 5px 5px 5px lightgray;
+            padding-left: 20px;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            display: inline-block;
+            width: 300px;
+            height: 20px;
+            padding: 10px 5px 5px 5px;
+            border: 0px;
+            outline: none;
+            margin-left: 15px;
+            font-size: 1.1em;
+            /* margin-top: 5px; */
+        }
+
+        /*sticky 설정*/
+        div.sticky {
+            position: sticky;
+            height: 80px;
+            top: 0px; /*어느 위치에 붙어있을지*/
+            padding: 20px 5px 5px 5px;
+            background-color: rgba(234, 234, 169, 0.7);
+        }
+
+        img{
+            width:25px;
+            padding: 5px;
+            padding-right: 30px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h2>Position Sticky 연습</h2>
+
+    <!--sticky 영역-->
+    <div class="sticky">
+        <!--검색창 영역-->
+        <div class="search">
+            <input type="text" placeholder="검색어를 입력하세요">
+            <!-- 돋보기 아이콘 -->
+            <img src="../images/magnifier.png" alt="돋보기">
+        </div>
+    </div>
+
+    <!--content 영역-->
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Quae sint minima iste maiores qui facilis enim quod at ipsam possimus, 
+            eligendi commodi, saepe laborum facere ullam iusto delectus mollitia ratione!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Quae sint minima iste maiores qui facilis enim quod at ipsam possimus, 
+            eligendi commodi, saepe laborum facere ullam iusto delectus mollitia ratione!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Quae sint minima iste maiores qui facilis enim quod at ipsam possimus, 
+            eligendi commodi, saepe laborum facere ullam iusto delectus mollitia ratione!
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색상 사용의 예</title>
+    <style>
+        div>span {
+            font-size: 2em;
+            font-weight: 900;
+            color: white;
+            /*오른쪽으로 5px, 아래쪽으로 5px, 얼마만큼 퍼지도록, 색상*/
+            /*알파값은 0에 가까울수록 투명, 1에 가까울수록 불투명*/
+            text-shadow: 5px 5px 5px rgba(100, 100, 100, 0.5);
+        }
+
+        div.box {
+            float: left; /*박스들이 왼쪽으로 정렬*/
+            width : 150px;
+            height: 150px;
+            /* border: 2px dotted blue; */
+            box-shadow: 8px 8px 8px rgba(100, 100, 100, 0.4);
+            margin: 10px; /* 상하 좌우 바깥여백 10px씩, 상하는 상쇄됨, 밑의 박스와 같이 상하마진을 공유*/
+            /*
+                margin: a b c d ; 12시부터 시계방향으로
+                margin: a b c ; 상하 좌 우
+                margin: a b ; 상하 좌우
+            */
+        }
+
+        div.item1 {
+            background-color: pink;
+        }
+
+        div.item2 {
+            background-color: rgba(100, 200, 250, 0.6);
+        }
+
+        div.item3 {
+            background-color: #9cf852;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>HTML</span> &nbsp;
+        <span>CSS</span> &nbsp;
+        <span>JavaScript</span> &nbsp;
+    </div>
+    <hr>
+
+    <div class="box item1"></div>
+    <div class="box item2"></div>
+    <div class="box item3"></div>
+</body>
+</html>

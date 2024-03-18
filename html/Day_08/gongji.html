@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+</head>
+<body>
+    <div class="container">
+        <h2>자바스크립트 시험 공지</h2>
+        <p>
+            Frontend (HTML + CSS + Javascript)시험은 3월 4일(월)에 1시부터 치룰 예정입니다.
+        </p>
+        <p>
+            연습문제로 내준 "정보처리기사 시험" 해설은 목요일 오전에 합니다. 
+        </p>
+        <p>
+            연습문제 풀이 후, Spring 과목은 목요일에 시작하겠습니다.
+        </p>
+        <br>
+        <input type="button" id="close_w" value="창닫기">
+        <input type="button" id="print_w" value="출력">
+    </div>
+
+    <script>
+        document.getElementById('close_w').addEventListener('click', function() {
+            window.close();
+        });
+
+        document.getElementById('print_w').addEventListener('click', function() {
+            window.print();// 프린트창 열어줌
+        });
+    </script>
+</body>
+</html>

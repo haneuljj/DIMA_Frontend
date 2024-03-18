@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 CSS 관리하기</title>
+    <script defer src="./script/A20_css.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color:lightgoldenrodyellow;
+            visibility: hidden;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color:#f4c2ac;
+            transition: all 1s ease-in-out;
+        }
+
+        .item:hover {
+            width: 200px;
+            height: 200px;
+        }
+
+        #click {
+            width: 300px;
+            height: 50px;
+            background-color: burlywood;
+            text-align: center;
+            font-size: large;
+            font-weight: bold;
+            padding-top: 15px;
+            cursor: pointer;
+        }
+
+        div>img {
+            opacity: 0.0; /*완전투명*/
+            width: 200px;
+            transition: all 1s ease-in-out;
+        }
+
+        /*
+        img:hover {
+            width: 600px;
+            transform: rotate(360deg);            
+        }*/
+        
+        /* ~ : 같은 형제 */
+        /* 바뀌는 모습 */
+        #click:hover ~ div>img {
+            opacity: 1.0;
+            width: 600px;
+        } 
+    </style>
+</head>
+<body>
+    <h2>자바스크립트 CSS 관리하기</h2>
+    <div>
+        <input type="button" id="change" value="바꾸기">
+        <input type="button" id="view" value="나타나기">
+        <input type="button" id="changeColor" value="색깔바꾸기">
+        <input type="button" id="stopChangeColor" value="색깔멈추기">
+    </div>
+    <p id="song">
+        나리나리 개나리 입에따다 물고요 <br>
+        병아리떼 뿅뿅뿅 봄나들이 갑니다.
+    </p>
+    <div class="box"></div>
+
+    <h2>아래의 상자는 JS가 아닌 CSS를 이용한 것임</h2>
+    <div class="item"></div>
+    <br>
+
+    <p id="click">마우스를 올려보세요</p>
+    <div class="myImg">
+        <img src="../images/dog.jpg" alt="puppy">
+    </div>
+    
+</body>
+</html>
